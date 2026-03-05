@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>H M Prema | Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
@@ -9,7 +12,8 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -17,60 +21,79 @@ background:#f4f7fb;
 color:#333;
 }
 
-.container{
-width:85%;
-margin:auto;
-padding:40px 0;
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+background:#111827;
+padding:15px;
+z-index:1000;
 }
 
-/* HERO SECTION */
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+}
+
+nav ul li{
+margin:0 20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
 
 .hero{
 display:flex;
-justify-content:space-between;
 align-items:center;
-background:linear-gradient(135deg,#3b82f6,#06b6d4);
+justify-content:space-between;
+padding:80px;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
 color:white;
-padding:60px;
-border-radius:12px;
-margin-top:30px;
 }
 
-.hero h1{
-font-size:45px;
+.hero-text h1{
+font-size:48px;
 margin-bottom:10px;
 }
 
-.hero p{
+.hero-text p{
 font-size:18px;
 margin-bottom:20px;
 }
 
 .hero img{
-width:170px;
+width:180px;
 border-radius:50%;
-border:5px solid white;
+border:6px solid white;
 }
 
 .btn{
 background:white;
 color:#2563eb;
-padding:12px 22px;
-text-decoration:none;
+padding:12px 25px;
 border-radius:6px;
+text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTION TITLES */
+/* SECTION */
 
-.section-title{
-font-size:28px;
-margin-bottom:20px;
-border-left:6px solid #2563eb;
-padding-left:10px;
+section{
+padding:60px 10%;
 }
 
-/* CARDS */
+.section-title{
+font-size:30px;
+margin-bottom:20px;
+color:#2563eb;
+}
 
 .card{
 background:white;
@@ -83,31 +106,41 @@ box-shadow:0 4px 10px rgba(0,0,0,0.08);
 /* SKILLS */
 
 .skills span{
+display:inline-block;
 background:#2563eb;
 color:white;
-padding:8px 14px;
+padding:8px 15px;
+margin:6px;
 border-radius:20px;
-margin:5px;
-display:inline-block;
-font-size:14px;
 }
 
 /* PROJECT GRID */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+}
+
+.project-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
 }
 
 /* FOOTER */
 
 footer{
-background:#1f2937;
+background:#111827;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
 }
 
 </style>
@@ -116,13 +149,31 @@ margin-top:40px;
 
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
+
+<nav>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
 
 <!-- HERO -->
 
 <div class="hero">
 
-<div>
+<div class="hero-text">
 
 <h1>H M Prema</h1>
 
@@ -131,7 +182,9 @@ Electronics and Communication Engineering Student
 | Embedded Systems | IoT | AI
 </p>
 
-<a href="resume.pdf" class="btn">Download Resume</a>
+<a href="resume.pdf" class="btn">
+<i class="fa fa-download"></i> Download Resume
+</a>
 
 </div>
 
@@ -141,81 +194,135 @@ Electronics and Communication Engineering Student
 
 <!-- ABOUT -->
 
-<div class="container">
+<section id="about">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">
+<i class="fa fa-user"></i> About Me
+</h2>
 
 <div class="card">
 
 <p>
-I am an Electronics and Communication Engineering student at 
+
+I am an Electronics and Communication Engineering student at
 Sir M. Visvesvaraya Institute of Technology with a CGPA of 8.5.
 
-I am passionate about embedded systems, IoT technologies, and 
-AI-driven applications. I enjoy building hardware-software 
-solutions that solve real-world problems and improve people's lives.
+I am passionate about embedded systems, IoT technologies,
+and AI-based applications. I enjoy building intelligent
+hardware-software systems that solve real-world problems.
+
 </p>
 
 </div>
 
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2 class="section-title">
+<i class="fa fa-graduation-cap"></i> Education
+</h2>
+
+<div class="card">
+
+<b>B.E Electronics and Communication Engineering</b>
+
+<p>Sir M. Visvesvaraya Institute of Technology</p>
+
+<p>CGPA: 8.5 | 2023 – Present</p>
+
 </div>
+
+<div class="card">
+
+<b>PUC – PCMB</b>
+
+<p>SMT Yalamanchili Janata Rani PU College</p>
+
+<p>Score: 92%</p>
+
+</div>
+
+<div class="card">
+
+<b>10th – State Board</b>
+
+<p>VidyaSagara Residential Public School</p>
+
+<p>Score: 96%</p>
+
+</div>
+
+</section>
 
 <!-- SKILLS -->
 
-<div class="container">
+<section id="skills">
 
-<h2 class="section-title">Technical Skills</h2>
+<h2 class="section-title">
+<i class="fa fa-code"></i> Technical Skills
+</h2>
 
-<div class="card skills">
+<div class="skills">
 
 <span>Embedded C</span>
+
 <span>Python</span>
+
 <span>Verilog</span>
+
 <span>Arduino</span>
+
 <span>MATLAB</span>
+
 <span>Multisim</span>
+
 <span>LabVIEW</span>
 
 </div>
 
-</div>
+</section>
 
 <!-- PROJECTS -->
 
-<div class="container">
+<section id="projects">
 
-<h2 class="section-title">Projects</h2>
+<h2 class="section-title">
+<i class="fa fa-laptop-code"></i> Projects
+</h2>
 
 <div class="projects">
 
-<div class="card">
+<div class="project-card">
 
 <h3>Smart Shoe for the Blind</h3>
 
 <p>
-Arduino-based assistive device using ultrasonic sensors to detect
-obstacles and alert users through vibration or sound.
+Arduino-based assistive device using ultrasonic sensors to
+detect obstacles and alert users through vibration or sound.
 </p>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>ResiScan – AI Resistor Scanner</h3>
 
 <p>
-Developed a deep learning model using MobileNetV2 to classify
-resistor color bands and predict resistance values in real time.
+Deep learning model using MobileNetV2 to identify resistor
+color bands and predict resistance values.
 </p>
 
 </div>
 
-<div class="card">
+<div class="project-card">
 
 <h3>Oral Cancer Detection</h3>
 
 <p>
-Built a CNN model to detect oral cancer from histopathological
+CNN model to detect oral cancer from histopathological
 images using MobileNetV2 and Kaggle datasets.
 </p>
 
@@ -223,47 +330,27 @@ images using MobileNetV2 and Kaggle datasets.
 
 </div>
 
-</div>
-
-<!-- CERTIFICATIONS -->
-
-<div class="container">
-
-<h2 class="section-title">Certifications</h2>
-
-<div class="card">
-
-<ul>
-
-<li>PCB Workshop – ComedKares Innovation Hub (2025)</li>
-
-<li>Generative AI Model – NxtWave (2024)</li>
-
-<li>IoT Workshop – IEEE Photonics Society</li>
-
-</ul>
-
-</div>
-
-</div>
+</section>
 
 <!-- CONTACT -->
 
-<div class="container">
+<section id="contact">
 
-<h2 class="section-title">Contact</h2>
+<h2 class="section-title">
+<i class="fa fa-envelope"></i> Contact
+</h2>
 
 <div class="card">
 
-<p>Email: premahiremath2005@gmail.com</p>
+<p><i class="fa fa-envelope"></i> premahiremath2005@gmail.com</p>
 
-<p>Phone: +91 7760051573</p>
+<p><i class="fa fa-phone"></i> +91 7760051573</p>
 
-<p>Location: Bengaluru, India</p>
-
-</div>
+<p><i class="fa fa-map-marker-alt"></i> Bengaluru, India</p>
 
 </div>
+
+</section>
 
 <footer>
 
@@ -272,4 +359,5 @@ images using MobileNetV2 and Kaggle datasets.
 </footer>
 
 </body>
+
 </html>
